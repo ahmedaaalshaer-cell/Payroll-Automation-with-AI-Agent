@@ -83,6 +83,6 @@ function applySaudiLaborLawFormulas(sheet, lastRow) {
   // ب. مؤشر الانضباط (سؤال 4): 100 للحاضر، 60 لمن غادر مبكراً، 0 للغائب
   sheet.getRange(2, 16, rangeCount).setFormulaR1C1("=IF(RC[-5]=\"غائب\", 0, IF(RC[-2]>0, 60, 100))");
 
-  // ج. احتمالية الاستقالة (سؤال 8): مرتفعة إذا كان الانضباط أقل من 70
+  // ج. احتمالية الاستقالة (سؤال 8): مرتفعة إذا كان الانضباط أقل  من 70
   sheet.getRange(2, 17, rangeCount).setFormulaR1C1("=IF(RC[-1]<70, \"مرتفعة\", \"منخفضة\")");
 }
